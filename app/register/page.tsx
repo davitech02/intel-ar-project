@@ -30,7 +30,7 @@ export default function RegisterPage() {
 
     try {
       // Note: We explicitly map the fields to match what app.py expects
-      const res = await fetch('https://intel-ar-backend.onrender.com/api/auth/register', {
+      const res = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

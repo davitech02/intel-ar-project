@@ -42,7 +42,7 @@ export default function ProjectsPage() {
       }
 
       try {
-        const res = await fetch('https://intel-ar-backend.onrender.com/api/projects', {
+        const res = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/projects', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (res.ok) {
