@@ -42,7 +42,7 @@ export default function ProjectsPage() {
       }
 
       try {
-        const res = await fetch('http://127.0.0.1:5000/api/projects', {
+        const res = await fetch('https://intel-ar-backend.onrender.com/api/projects', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (res.ok) {

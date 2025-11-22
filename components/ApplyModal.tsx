@@ -36,7 +36,7 @@ export default function ApplyModal({ show, handleClose, roleTitle }: ApplyModalP
     formData.append('resume', resume);
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/careers/apply', {
+      const res = await fetch('https://intel-ar-backend.onrender.com/api/careers/apply', {
         method: 'POST',
         body: formData, // No Content-Type header needed (browser sets it for FormData)
       });

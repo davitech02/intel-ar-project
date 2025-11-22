@@ -50,7 +50,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (email: string, pass: string) => {
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/auth/login', {
+      const res = await fetch('https://intel-ar-backend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password: pass }),

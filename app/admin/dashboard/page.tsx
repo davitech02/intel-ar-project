@@ -24,7 +24,7 @@ export default function AdminDashboardPage() {
       const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
       
       try {
-        const res = await fetch('http://127.0.0.1:5000/api/admin/stats', {
+        const res = await fetch('https://intel-ar-backend.onrender.com/api/admin/stats', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         if (res.ok) {

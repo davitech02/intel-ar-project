@@ -32,13 +32,13 @@ export default function ClientDashboardPage() {
 
       try {
         // 1. Fetch Projects
-        const projRes = await fetch('http://127.0.0.1:5000/api/projects', {
+        const projRes = await fetch('https://intel-ar-backend.onrender.com/api/projects', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const projects = await projRes.json();
 
         // 2. Fetch Tickets
-        const ticketRes = await fetch('http://127.0.0.1:5000/api/tickets', {
+        const ticketRes = await fetch('https://intel-ar-backend.onrender.com/api/tickets', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const tickets = await ticketRes.json();

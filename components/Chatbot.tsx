@@ -40,7 +40,7 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/ai-chat', {
+      const res = await fetch('https://intel-ar-backend.onrender.com/api/ai-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: inputText }),
