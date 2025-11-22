@@ -1,26 +1,40 @@
-@import "tailwindcss";
+/* app/globals.css */
 
+/* Define our brand colors as CSS variables for easy reuse */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --midnight-blue: #0b1f3a;
+  --cyan: #06b6d4;
+  --light-gray: #f1f5f9;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Custom class for our curved cards with subtle shadows */
+/* We will reuse this for services, testimonials, blog posts, etc. */
+.card-custom {
+  border-radius: 1rem !important; /* 1rem is our 'xl' curved edge */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Subtle shadow */
+  border: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Custom Button Style for our Cyan color */
+.btn-cyan {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  color: white;
+}
+
+.btn-cyan:hover {
+  background-color: #0891b2; /* A slightly darker cyan */
+  border-color: #0891b2;
+  color: white;
 }
